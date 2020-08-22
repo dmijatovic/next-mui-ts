@@ -1,25 +1,11 @@
 import Head from 'next/head'
 
-import {Paper, Typography, Card, CardContent,Container} from "@material-ui/core"
-import { makeStyles, Theme } from '@material-ui/core/styles';
+import {Paper, Typography, Card, CardContent,Container, Grid} from "@material-ui/core"
 
-let currentTheme={}
-
-const useStyles = makeStyles(theme => {
-  currentTheme = theme
-  return (props)=>{
-    debugger
-    return {
-      homePage: {
-        color: theme.palette.primary.main,
-      }
-    }
-  }
-})
+import ThemeProps from 'components/ThemeProps'
+import TypographyDemo from 'components/TypographyDemo'
 
 export default function Home(props) {
-  const styles = useStyles(props)
-  console.log("styles:", styles)
   return (
     <Paper
       elevation={0}
@@ -36,21 +22,17 @@ export default function Home(props) {
           variant="h1"
           color="primary"
         >
-          It works :-)
+          Header 1 - Title
         </Typography>
         <Card>
           <CardContent>
-            <Typography
-              variant="h3"
-              color="textSecondary"
-              >Default theme props</Typography>
-            <pre>
-            {JSON.stringify(currentTheme, null, 2)}
-            </pre>
+            <Grid container spacing={2}>
+              <TypographyDemo/>
+              <ThemeProps/>
+            </Grid>
           </CardContent>
         </Card>
       </Container>
     </Paper>
-
   )
 }
