@@ -3,7 +3,7 @@ import {Typography, Grid} from "@material-ui/core"
 
 export default function TypographyDemo(){
   return (
-    <Grid item md={6} xs={12}>
+    <Grid item md={4} xs={12}>
       <Typography variant="h1">
         Header 1
       </Typography>

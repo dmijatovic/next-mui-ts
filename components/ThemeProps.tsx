@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => {
 export default function ThemeProps(props){
   const styles = useStyles(props)
   return(
-    <Grid item md={6} xs={12}>
+    <Grid item md={8} xs={12}>
       <Typography
         variant="h2"
         color="secondary"

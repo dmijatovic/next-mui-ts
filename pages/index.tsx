@@ -17,7 +17,7 @@ export default function Home(props) {
         <title>Material-UI with NextJS</title>
       </Head>
 
-      <Container maxWidth="md">
+      <Container maxWidth="lg">
         <Typography
           variant="h1"
           color="primary"
