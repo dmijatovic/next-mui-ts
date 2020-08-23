@@ -39,3 +39,7 @@ For [collor palette ideas](https://coolors.co/palettes/trending) use colors.io f
 Fonts can be customized based on typography section of the theme. See [official documentation](https://material-ui.com/customization/typography/) for more info.
 
 I have changed the font sizes for the headers (made smaller) and added scaling based on the html font-size set to 100%. Other font-sizes use `rem` which will scale them when html font size (percentage) is changed.
+
+I used Google Fonts here. I noticed with custom fonts that there is a fouc effect on intial load. After removing swap flag the problem is solved, thoug it will take more time to first paint. The similair case is [noted on stackoverflow](https://stackoverflow.com/questions/56537360/google-font-display-swap-strange-behaviour).
+
+All [font display options can be viewed here](https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display).
