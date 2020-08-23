@@ -5,15 +5,15 @@ import theme from 'styles/theme';
 
 export default class MyDocument extends Document {
   render() {
+    // console.log("document")
     return (
       <Html lang="en">
         <Head>
+          {/* dv4loader for app loading */}
+          <script src="https://cdn.jsdelivr.net/npm/@dv4all/loaders@1.0.1/lib/dv4loaders.cjs.min.js"></script>
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-          />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"/>
         </Head>
         <body>
           <Main />
@@ -52,6 +52,8 @@ MyDocument.getInitialProps = async (ctx) => {
   // Render app and page and get the context of the page with collected side effects.
   const sheets = new ServerStyleSheets();
   const originalRenderPage = ctx.renderPage;
+
+  console.log("getInitalProps...")
 
   ctx.renderPage = () =>
     originalRenderPage({
