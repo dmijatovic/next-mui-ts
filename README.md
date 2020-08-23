@@ -1,5 +1,13 @@
 # Next material-ui setup with typescript
 
+This repo is used to experiment with Material-UI with NextJS. The branches hold different experiments:
+
+- basic: this is basic setup of NextJS and material-ui
+- custom-theme: this is basic setup extended with custom theme
+- master: will follow dev but having completed experiment (stage of testing)
+- dev: extending setup with more material-ui components, it is experimenting branch with non-completed stages
+- other branches: in case I think the stage is usefull I will save it to a branch so it can be easily accessed
+
 ## Install dependencies
 
 ```bash
