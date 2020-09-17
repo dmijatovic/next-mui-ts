@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "preexport":"next build",
+    "preexport": "next build",
     "export": "next export"
   },
   "dependencies": {
