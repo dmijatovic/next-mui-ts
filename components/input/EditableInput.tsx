@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, MutableRefObject } from 'react'
 import { FormControl,InputLabel,Input, InputAdornment, IconButton } from "@material-ui/core"
 import EditIcon from '@material-ui/icons/Edit'
 import { makeStyles } from '@material-ui/core/styles';
@@ -9,13 +9,13 @@ const useStyles = makeStyles((theme)=>({
 
 export default function EditableInput() {
   const styles = useStyles()
-  const inputRef = useRef()
+  const inputRef:MutableRefObject<HTMLElement> = useRef()
   const [disabled, setDisabled] = useState(true)
   const [value, setValue] = useState(null)
 
   useEffect(()=>{
-    if (disabled===false){
-      inputRef.current.focus()
+    if (disabled===false && inputRef){
+      inputRef['current'].focus()
     }
   },[disabled,inputRef])
   return (

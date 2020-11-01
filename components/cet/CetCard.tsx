@@ -2,8 +2,9 @@ import {Card, CardActions, Typography,IconButton, CardContent, Grid} from '@mate
 import {Add} from '@material-ui/icons'
 import { makeStyles } from '@material-ui/core/styles';
 
-import TreeView from './TreeView'
+import TreeView, {RenderTree} from './TreeView'
 import items from "./__mocks__/cet_items"
+const treeItems = items as RenderTree[]
 
 const useStyles = makeStyles((theme)=>({
   card:{
@@ -19,7 +20,7 @@ const useStyles = makeStyles((theme)=>({
 
 export default function CECard(){
   const styles = useStyles();
-
+  
   return (
     <Card className={styles.card}>
       <CardActions className={styles.cardActions}>
@@ -32,7 +33,7 @@ export default function CECard(){
         </CardActions>
       <CardContent>
         <Grid container spacing={2}>
-          <TreeView items={items} />
+          <TreeView items={treeItems} />
         </Grid>
       </CardContent>
     </Card>

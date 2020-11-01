@@ -98,10 +98,10 @@ function StyledTreeItem(props: StyledTreeItemProps) {
           </Typography>
         </div>
       }
-      style={{
-        '--tree-view-color': color,
-        '--tree-view-bg-color': bgColor,
-      }}
+      // style={{
+      //   '--tree-view-color': color,
+      //   '--tree-view-bg-color': bgColor,
+      // }}
       classes={{
         root: classes.root,
         content: classes.content,

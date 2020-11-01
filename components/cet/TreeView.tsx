@@ -19,7 +19,7 @@ interface ElementContent{
   }]
 }
 
-interface RenderTree {
+export interface RenderTree {
   id: string;
   name: string;
   data?: ElementContent[],
@@ -41,7 +41,7 @@ const useStyles = makeStyles({
 
 });
 
-export default function CetTree({items, nav}:{items:RenderTree[], nav:any}) {
+export default function CetTree({items}:{items:RenderTree[]}) {
   const styles = useStyles()
   const [expanded, setExpanded] = useState<string[]>([])
 
