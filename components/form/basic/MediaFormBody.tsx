@@ -4,13 +4,12 @@ import MenuItem from '@material-ui/core/MenuItem'
 import { FormGroup, Switch } from "@material-ui/core";
 import Chip from '@material-ui/core/Chip';
 
-
-import useStyles from "./MediaFormStyles"
-import {mediumType, country, mediumAliases} from './mediaFieldsConfig'
+import useStyles from "../MediaFormStyles"
+import {mediumType, country, mediumAliases} from '../mediaFieldsConfig'
 import InputAndAddBtn from './InputAndAddBtn'
+import TextFieldValid from '../TextFieldValid'
 
-
-export default function MediaFormBody({register}) {
+export default function MediaFormBody() {
   const styles = useStyles();
   const [aliasList,setAliasList]=useState(mediumAliases)
 
@@ -90,7 +89,7 @@ export default function MediaFormBody({register}) {
           type="text"
           name="name"
           label="Medium"
-          inputRef={register({requered:true})}
+          InputProps={{inputProps:{minLength:5,maxLength:100}}}
           helperText="Type medium name"
           className={styles.inputFlex}
         />
@@ -107,6 +106,7 @@ export default function MediaFormBody({register}) {
           name="readership"
           label="Readership"
           helperText="Type valid number or leave it empty"
+          InputProps={{inputProps:{min:100,max:1000000}}}
         />
         {inputGap()}
         <TextField
@@ -115,6 +115,16 @@ export default function MediaFormBody({register}) {
           name="circulation"
           label="Circulation"
           helperText="Type valid number or leave it empty"
+          InputProps={{inputProps:{min:100,max:1000000}}}
+        />
+      </FormGroup>
+      <FormGroup className={styles.formGroup} row>
+        <TextFieldValid
+          type="text"
+          name="test-field"
+          label="Test field"
+          helperText="Provide string of 5 to 55 length"
+          InputProps={{inputProps:{minLength:5,maxLength:55}}}
         />
       </FormGroup>
       <FormGroup className={styles.formGroup} row>

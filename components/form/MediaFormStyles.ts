@@ -1,7 +1,19 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { FullscreenExit } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme)=>({
+  form:{
+    minWidth:'25rem',
+    maxWidth:'35rem'
+  },
+  formHead:{
+    borderBottom:'1px solid lightgrey'
+  },
+  formBody:{
+    padding:'1rem',
+  },
+  formNav:{
+    padding:'1rem'
+  },
   switchLabel:{
     textAlign: 'center',
     fontSize:'0.825rem',

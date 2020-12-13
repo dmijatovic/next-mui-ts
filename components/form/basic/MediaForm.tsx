@@ -1,8 +1,7 @@
+import { useRef, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button'
 import SaveIcon from '@material-ui/icons/Save'
-
-import { useForm } from "react-hook-form";
 
 import MediaFormBody from './MediaFormBody'
 
@@ -23,13 +22,13 @@ const useStyles = makeStyles((theme)=>({
 }));
 
 
-
 export default function MediaForm() {
   const styles = useStyles();
-  // const { register, handleSubmit, watch, errors } = useForm();
-  const { register, handleSubmit, formState } = useForm({
-    mode: "onChange"
-  });
+  const formRef = useRef(null)
+  const [state,setState] = useState({
+    valid:false,
+    data: {}
+  })
 
   function onSubmit(data){
     console.log(data)
@@ -39,22 +38,25 @@ export default function MediaForm() {
     console.log("CANCEL")
   }
 
-  console.log("useForm.formState",formState)
 
   return (
     <form
+      ref={formRef}
       className={styles.form}
-      onSubmit={handleSubmit(onSubmit)}
+      onChange={(e)=>{
+        console.log("form change",e)
+      }}
+      onSubmit={onSubmit}
       autoComplete="off">
       <section className={styles.formBody}>
-        <MediaFormBody register={register} />
+        <MediaFormBody />
       </section>
       <section className={styles.formNav}>
         <Button onClick={handleCancel}>
             Cancel
         </Button>
         <Button
-          disabled={!formState.isValid}
+          disabled={!state.valid}
           type="submit"
           variant="contained"
           color="primary"

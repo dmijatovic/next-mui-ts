@@ -79,12 +79,12 @@ export const country={
 }
 
 export const mediumAliases=[
-  {type:"chip",id:0,label:"Media alias 1"},
-  {type:"chip",id:1,label:"Media alias 2"},
-  {type:"chip",id:2,label:"Alias 3"},
-  {type:"chip",id:3,label:"Alias 4"},
-  {type:"chip",id:4,label:"Alias 4"},
-  {type:"chip",id:5,label:"Alias 4"},
-  {type:"chip",id:6,label:"Alias 4"},
-  {type:"chip",id:7,label:"Alias 4"},
+  {type:"chip",id:"0",label:"Media alias 1"},
+  {type:"chip",id:"1",label:"Media alias 2"},
+  {type:"chip",id:"2",label:"Alias 3"},
+  {type:"chip",id:"3",label:"Alias 4"},
+  {type:"chip",id:"4",label:"Alias 4"},
+  {type:"chip",id:"5",label:"Alias 4"},
+  {type:"chip",id:"6",label:"Alias 4"},
+  {type:"chip",id:"7",label:"Alias 4"},
 ]

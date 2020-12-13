@@ -1,7 +1,8 @@
 import { Typography } from "@material-ui/core"
 import { makeStyles } from '@material-ui/core/styles';
 
-import MediaForm from 'components/form/MediaForm'
+import MediaForm from 'components/form/basic/MediaForm'
+import MediaUseForm from 'components/form/MediaUseForm'
 
 const useStyles = makeStyles((theme)=>({
   root: { }
@@ -12,7 +13,8 @@ export default function FormDemoPage() {
   return (
     <>
     <h1>Form demo</h1>
-    <MediaForm />
+    {/* <MediaForm /> */}
+    <MediaUseForm  />
     </>
   )
 }
