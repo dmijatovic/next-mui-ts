@@ -4,7 +4,7 @@ import InputAdornment from '@material-ui/core/InputAdornment'
 import IconButton from '@material-ui/core/IconButton'
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline'
 
-import useStyles from "../MediaFormStyles"
+import useStyles from "../mediaFormStyles"
 
 export default function InputAndAddBtn(props) {
   const styles = useStyles();

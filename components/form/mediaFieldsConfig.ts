@@ -53,9 +53,12 @@ export const fieldsLayout=[
 
 export const mediumType = {
   type:"select",
-  required:true,
-  id:'mediumType',name:'mediumType',label:"Medium Type",helperText:"Select medium type",
+  id:'mediumType',
+  name:'mediumType',
+  label:"Medium Type",
+  helperText:"Select medium type",
   defaultValue:'option2',
+  rules:{required:true},
   options:[{
     id:'option1',label:'Option 1'
   },{
@@ -67,8 +70,12 @@ export const mediumType = {
 
 export const country={
   type:"select",
-  id:'country',name:'country',label:"Country",helperText:"Select country",required:true,
+  id:'country',
+  name:'country',
+  label:"Country",
+  helperText:"Select country",
   defaultValue:'option3',
+  rules:{required:true},
   options:[{
     id:'option1',label:'Option 1'
   },{

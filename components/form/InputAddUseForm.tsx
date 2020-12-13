@@ -4,7 +4,7 @@ import InputAdornment from '@material-ui/core/InputAdornment'
 import IconButton from '@material-ui/core/IconButton'
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline'
 
-import useStyles from "./MediaFormStyles"
+import useStyles from "./mediaFormStyles"
 import {Controller, useForm} from 'react-hook-form'
 
 export default function InputAddUseForm({onAdd}) {
@@ -57,7 +57,7 @@ export default function InputAddUseForm({onAdd}) {
         { onChange, onBlur, value, name, ref },
         { invalid, isTouched, isDirty }
       ) => {
-        console.log("add-feed-alias.invalid...", invalid)
+        // console.log("add-feed-alias.invalid...", invalid)
         // debugger
         const {disabled,error,helperText}=validate(value,invalid)
         return(

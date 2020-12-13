@@ -4,10 +4,10 @@ import MenuItem from '@material-ui/core/MenuItem'
 import { FormGroup, Switch } from "@material-ui/core";
 import Chip from '@material-ui/core/Chip';
 
-import useStyles from "../MediaFormStyles"
+import useStyles from "../mediaFormStyles"
 import {mediumType, country, mediumAliases} from '../mediaFieldsConfig'
 import InputAndAddBtn from './InputAndAddBtn'
-import TextFieldValid from '../TextFieldValid'
+import TextFieldValid from './TextFieldValid'
 
 export default function MediaFormBody() {
   const styles = useStyles();

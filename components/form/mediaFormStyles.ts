@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme)=>({
   },
   switchLabel:{
     textAlign: 'center',
-    fontSize:'0.825rem',
+    fontSize: '0.825rem',
     color: theme.palette.text.secondary
   },
   aliasLabel:{
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme)=>({
     padding:'1rem 0rem'
   },
   inputGap:{
-    padding:'1rem'
+    padding:theme.spacing(1)
   },
   inputFlex:{
     flex:1
