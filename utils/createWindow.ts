@@ -1,10 +1,12 @@
 
 function calcOptions(type:string){
-  let width=1024, left=1, height=screen.height
+  let width=880, left=1, height=1020
+  // height=screen.height
   if (type==="article"){
-    width=screen.width - 1024
-    if (width < 800) width=800
-    left=1025
+    width = 1024
+    // width=screen.width - 880
+    // if (width < 800) width = 800
+    left = 885
   }
   return `menubar=no,location=no,resizable=no,scrollbars=yes,status=yes,top=0,left=${left},width=${width},height=${height}`
 }

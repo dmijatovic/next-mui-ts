@@ -71,7 +71,7 @@ export default function OpenItem() {
       winArticle.focus()
     } else {
       const win = createWindow(
-        "https://www.banken.nl/nieuws/22650/rabobank-stelt-negatieve-rente-in-voor-spaartegoeden-boven-250000",
+        "https://www.banken.nl/nieuws/22841/ing-verwacht-daling-aantal-nieuwbouwwoningen-in-2021",
         "article")
       if (win) setArticle(win)
     }
