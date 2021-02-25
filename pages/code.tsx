@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import AccordionCard from 'components/accordion/AccordionCard'
 import CETAccordion from 'components/accordion/CETAccordion'
+import {ContentElementType} from 'components/accordion/cetTypes'
 
 import CETData from 'components/accordion/__mocks__/CETTreeData'
 
@@ -25,7 +26,7 @@ export default function Code() {
         CETData.map(cet=>{
           return <CETAccordion
             key={cet.cetId}
-            cetItem={cet}
+            cetItem={cet as ContentElementType}
           />
         })
       }
